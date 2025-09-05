@@ -1,24 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import ProfilePage from "./app/(tabs)/Profile"; // Or other components/screens
+import { ThemeProvider } from "./app/(tabs)/ThemeContext"; // Your theme provider file
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>🚀 Hello Expo! Your app is working now 🎉</Text>
-    </View>
+    <ThemeProvider>
+      <ProfilePage />
+      {/* Other screens/components */}
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  text: {
-    fontSize: 22,
-    fontWeight: '600',
-    color: '#333',
-  },
-});
